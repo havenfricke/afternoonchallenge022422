@@ -25,7 +25,8 @@
   <main class="container-fluid">
     <section class="row my-3">
       <div class="col-lg-6 m-auto">
-        <form onsubmit="app.songsController.search(event)" class="d-flex align-items-center bg-dark elevation-2 rounded p-1 shadow">
+        <form onsubmit="app.songsController.search(event)"
+          class="d-flex align-items-center bg-dark elevation-2 rounded p-1 shadow">
           <input type="text" class="form-control" name="query" placeholder="Search For Music" />
           <button class="btn btn-dark" type="submit">
             Search
@@ -35,16 +36,50 @@
     </section>
 
     <section class="row">
-      <div class="col-lg-6">
-        <h3 class="text-center">Search Results</h3>
-        <div id="songs" class="col-12 m-0">
-          <!-- api songs -->
+      <div class="col-lg-4">
+        <h3 class="text-start border-dark border-bottom">Search Results</h3>
+        <div class="col-8 m-0">
+          <div style="height: 60vh;width:100%;font:16px Arial, Serif;overflow:auto;" class="card bg-dark">
+            <ul id="songs" class="p-5">
+
+              <!-- <li>Song 1</li> -->
+
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="col-lg-6">
-        <h3 class="text-center">Playlist</h3>
-        <div class="col-12 m-0" id="playlist">
-          <!-- template for playlist -->
+
+      <div class="col-lg-4">
+        <div class="col-12 mt-2">
+          <h1 class="text-center">CODEWORKS MUSIC</h1>
+          <!-- ACTIVE SONG TEMPLATE -->
+          <section>
+            <div id="displayed-song">
+              <!-- <div>
+              <img src="https://vinyldestinationkuwait.com/wp-content/uploads/2019/08/R-238369-1490362449-5582.jpeg.jpg"
+                alt="">
+            </div>
+            <h3 class="text-center">2Pac</h3>
+            <h5 class="text-center">all eyes on me</h5>
+            <p class="text-center">all eyes on me</p>
+            <div class="p-1 mb-5 d-flex justify-content-center">
+            </div> -->
+            </div>
+          </section>
+        </div>
+      </div>
+
+
+      <div class="col-lg-4">
+        <h3 class="text-end border-dark border-bottom">My Playlist</h3>
+        <div class="col-12 d-flex justify-content-end m-0">
+          <div class="col-8 m-0">
+            <div style="height: 60vh;width:100%;font:16px Arial, Serif;overflow:auto;" class="card bg-dark">
+              <ul id="playlist" class="p-5">
+                <!-- <li>Song 1</li> -->
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
